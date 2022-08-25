@@ -1,0 +1,10 @@
+* {
+  background-color: rgb(245, 222, 188);
+  color: black;
+  font-family:'Times New Roman', Times, serif
+}
+
+li{
+  list-style: none;
+  margin: 22px;
+}

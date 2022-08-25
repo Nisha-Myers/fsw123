@@ -9,4 +9,4 @@ const TodoList = ({data, completeToDo, deleteToDo}) => {
     )
 };
 
-export default TodoList; 
+export default TodoList;  

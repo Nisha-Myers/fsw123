@@ -21,6 +21,7 @@ class TodoApp extends React.Component {
   }
 }
 
+
  completeTodo = (e) =>{
   if (e) {
     let aryUpdatedTodos = [...this.state.aryTodos]
@@ -37,6 +38,7 @@ class TodoApp extends React.Component {
     });
   }
 }
+
 
 deleteTodo = (e) => {
   if (e) {
@@ -65,6 +67,7 @@ render() {
   );
 
 
+
   return (
     <div className= 'doS'>
       <div className= "doS">To Do List</div>
@@ -73,6 +76,7 @@ render() {
     );
   }
 }
+
 
 
 
