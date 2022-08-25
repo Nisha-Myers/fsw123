@@ -26,7 +26,7 @@ const App = () => {
    
   const completeTodo = (id) => {
     let temporaryToDosArray = [...todos];
-    let toDoIndex = temporaryToDosArray.findIndex(element => element.id  === id);
+    let toDoIndex = temporaryToDosArray.findIndex(element => element.id === id);
     temporaryToDosArray[toDoIndex].isCompleted = !temporaryToDosArray[toDoIndex].isCompleted;
     setTodos(temporaryToDosArray);
   };
