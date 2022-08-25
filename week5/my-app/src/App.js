@@ -2,7 +2,7 @@ import { useState } from "react";
 import {v4 as uuidV4} from "uuid";
 
 import {toDoArray} from './Store.js';
-import ToDoForm from "./TodoForm";
+import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
 import "./App.css";
 
@@ -40,8 +40,8 @@ const App = () => {
 
   const editTodo = (id) => {
     let temporaryToDosArray = [...todos];
-    let editToDoItem = temporaryToDosArray.findIndex(element => element.id === id);
-    temporaryToDosArray[editToDoItem].editState = !temporaryToDosArray[editToDoItem].editState;
+    let editTodoItem = temporaryToDosArray.findIndex(element => element.id === id);
+    temporaryToDosArray[editTodoItem].editState = !temporaryToDosArray[editTodoItem].editState;
     setTodos(temporaryToDosArray);
  
 
@@ -49,10 +49,10 @@ const App = () => {
 
   const submitEdit = (text, id) => {
     let temporaryToDosArray = [...todos];
-    let editToDoItem = temporaryToDosArray.findIndex(element => element.id === id);
-    temporaryToDosArray[editToDoItem].text = text;
-    temporaryToDosArray[editToDoItem].editState = !temporaryToDosArray[editToDoItem].editState;
-    Object.assign(temporaryToDosArray[editToDoItem], temporaryToDosArray[editToDoItem]);
+    let editTodoItem = temporaryToDosArray.findIndex(element => element.id === id);
+    temporaryToDosArray[editTodoItem].text = text;
+    temporaryToDosArray[editTodoItem].editState = !temporaryToDosArray[editTodoItem].editState;
+    Object.assign(temporaryToDosArray[editTodoItem], temporaryToDosArray[editTodoItem]);
     setTodos(temporaryToDosArray);
 
   };
@@ -61,8 +61,8 @@ const App = () => {
   return (
     <>
     <h1>To Do List</h1>
-      <h2>Add new To Do:</h2>
-      <ToDoForm addTodo={addTodo}/>
+      <h2>Add a NEW To Do:</h2>
+      <TodoForm addTodo={addTodo}/>
       <TodoList addTodo={addTodo} 
         data={todos} 
         completeTodo={completeTodo} 
@@ -74,5 +74,8 @@ const App = () => {
 
   );
 }
+
+
+
 
 export default App;
